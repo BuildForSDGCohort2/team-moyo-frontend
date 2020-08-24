@@ -41,7 +41,7 @@
     "launch": {
         "title": "title",
         "image": "image",
-        "description": "description",
+        "description": "description"
     },
     "job": {
         "organization": "Name of organization",
