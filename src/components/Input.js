@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Input.css';
 
-const Input = ({ type, required, ...props }) => {
+const Input = ({ type, name, required, ...props }) => {
 	return (
 		<input
 			className="moyo-input"
 			type={type}
+			name={name}
 			required={required}
 			{...props}
 		/>
@@ -13,6 +15,10 @@ const Input = ({ type, required, ...props }) => {
 };
 
 Input.propTypes = {
+	/**
+	 * The name of the input element
+	 */
+	name: PropTypes.string.isRequired,
 	/**
 	 * The type of input Elelemt it is
 	 */
