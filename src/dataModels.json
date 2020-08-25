@@ -1,0 +1,53 @@
+{
+    "post": {
+        "body": "Body of the post",
+        "likes": "Number of likes",
+        "user": "Reference of User Who Posted",
+        "tags": ["array of tags (max of 4)"],
+        "images": ["array of image url"],
+        "communityId": "community id if any",
+        "language": "language of the post",
+        "parentPost": "Id of an original post if post belongs to a thread"
+    },
+    "codeblock":{
+        "post": "post which the codeblock belongs to",
+        "language": "language of the codeblock"
+    },
+    "comment":{
+        "postId": "Id of post the comment belongs to",
+        "user": "User who commented"
+    },
+    "user": {
+        "email": "Email address",
+        "bio": "bio",
+        "country": "Country of user",
+        "website": "website of user",
+        "github": "github",
+        "twitter": "twitter",
+        "mobile": "mobile number"
+    },
+    "notification": {
+        "title": "title",
+        "body": "body",
+        "call to action": "call to action/link if any",
+        "image": "image if any"
+    },
+    "community":{
+        "name": "name",
+        "profilepicture": "profilepicture",
+        "bio": "bio",
+        "administrators": ["array of admins"]
+    },
+    "launch": {
+        "title": "title",
+        "image": "image",
+        "description": "description"
+    },
+    "job": {
+        "organization": "Name of organization",
+        "title": "title",
+        "description": "description",
+        "skills": ["array of skill requirements"],
+        "website": "website of company"
+    }
+}
