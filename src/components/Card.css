@@ -1,0 +1,14 @@
+.moyo-card{
+    border-radius: 8px;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 0 0 2px 2px #d9d9d91f;
+}
+
+.moyo-card--soft{
+    box-shadow: 0 0 2px 2px 0 0 2px 2px #d9d9d940;
+}
+
+.moyo-card--hard{
+    box-shadow: 0 0 2px 2px #d9d9d980;
+}
