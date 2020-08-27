@@ -1,9 +1,5 @@
 import React from 'react';
-// import Button from './stories/StoryButton';
-import Button from './components/Button';
-import Input from './components/Input';
-import Card from './components/Card';
-import Loader from './components/Loader';
+import { Button, Card, Loader, Input } from './components';
 import './global.css';
 
 function App() {

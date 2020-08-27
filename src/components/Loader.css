@@ -9,8 +9,8 @@
     width: 2rem;
     height: 2rem;
     vertical-align: text-bottom;
-    border: .25em solid var(--moyo-green-500);
+    border: .2em solid var(--moyo-green-400);
     border-right-color: #0000;
     border-radius: 50%;
-    animation: allround .75s linear infinite;
+    animation: allround .7s linear infinite;
 }
