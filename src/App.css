@@ -8,3 +8,8 @@ body {
   font-family: sans-serif;
   line-height: 1.4;
 }
+
+.banner {
+  text-align: center;
+  /* background: blue; */
+}
