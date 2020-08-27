@@ -1,12 +1,16 @@
 .moyo-button {
     color: white;
     font-weight: 700;
-	border-radius: 20px;
+	border-radius: 22px;
 	background: var(--moyo-green-400);
 	cursor: pointer;
 	padding: 10px 16px;
 	outline: none;
 	border: none;
+}
+
+.moyo-button:hover{
+	background-color: var(--moyo-green-500);
 }
 
 .moyo-button--medium {
