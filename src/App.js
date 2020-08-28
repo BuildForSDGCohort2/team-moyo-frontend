@@ -21,7 +21,7 @@ function App() {
 			<Card />
 			<Loader />
 
-			<CodeEditor theme={'monokai'} code={code} />
+			<CodeEditor theme="" code={code} mode="" />
 		</div>
 	);
 }
