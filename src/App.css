@@ -8,8 +8,31 @@ body {
   font-family: sans-serif;
   line-height: 1.4;
 }
-
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .banner {
   text-align: center;
   /* background: blue; */
+}
+
+/* .main {
+  background: black;
+  color: white;
+} */
+
+.about {
+  width: 50%;
+  /* margin-bottom: 3rem; */
+}
+.moyo-text {
+  margin-bottom: 3rem;
+}
+
+ul {
+  list-style: circle;
 }

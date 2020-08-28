@@ -9,6 +9,23 @@ export default class LandingPage extends Component {
         <div className="banner">
         <img className="" src={logo} alt="Logo" />
         </div>
+        <div className="main">
+            <div className="about">
+                <h1 className="moyo-heading">Africa can Code</h1>
+                <p className="moyo-text">Surprisingly, there is a very vocal faction of the design community that wants to see filler text banished to the original sources from whence it came. Perhaps not surprisingly, in an era of endless quibbling, there is an equally vocal contingent of designers leaping to defend the use of the time-honored tradition of greeking</p>
+
+                <ul className="">
+                    <li className="">Surprisingly, there is a very vocal faction of the design community that wants to see filler text banished to the original sources from whence it came. Perhaps not surprisingly, in an era of endless quibbling, there is an equally vocal contingent of designers leaping to defend the use of the time-honored tradition of greeking</li>
+                    <li className="">Surprisingly, there is a very vocal faction of the design community that wants to see filler text banished to the original sources from whence it came. Perhaps not surprisingly, in an era of endless quibbling, there is an equally vocal contingent of designers leaping to defend the use of the time-honored tradition of greeking</li>
+                    <li className="">Surprisingly, there is a very vocal faction of the design community that wants to see filler text banished to the original sources from whence it came. Perhaps not surprisingly, in an era of endless quibbling, there is an equally vocal contingent of designers leaping to defend the use of the time-honored tradition of greeking</li>
+                    <li className="">Surprisingly, there is a very vocal faction of the design community that wants to see filler text banished to the original sources from whence it came. Perhaps not surprisingly, in an era of endless quibbling, there is an equally vocal contingent of designers leaping to defend the use of the time-honored tradition of greeking</li>
+                </ul>
+
+            </div>
+            <div className="">
+                
+            </div>
+        </div>
 
         
       </div>
