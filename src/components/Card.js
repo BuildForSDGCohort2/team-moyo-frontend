@@ -1,6 +1,8 @@
 import React from 'react';
 import './Card.css';
 
+/**@module components/Button */
+
 const Card = ({ shadow, ...props }) => {
 	return (
 		<div className="moyo-card">

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Loader.css';
 
+/**@module components/Button */
+
 const Loader = () => {
 	return (
 		<div className="spinner-border">

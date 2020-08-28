@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Input.css';
 
+/**@module components/Button */
+
 const Input = ({ type, name, required, ...props }) => {
 	return (
 		<input

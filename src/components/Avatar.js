@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Avatar.css';
 
+/**@module components/Button */
+
 const Avatar = ({ url, alt, ...props }) => {
 	return (
 		<div>
