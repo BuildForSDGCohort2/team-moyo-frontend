@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import logo from '../../assets/img/logo.png'; 
+// import facebook from '../../assets/img/facebook.png'; 
+import SignupForm from "../Signup/index";
+
 import '../../App.css';
 export default class LandingPage extends Component {
 
@@ -22,8 +25,8 @@ export default class LandingPage extends Component {
                 </ul>
 
             </div>
-            <div className="">
-                
+            <div className="right-side">
+                <SignupForm />
             </div>
         </div>
 

@@ -20,10 +20,9 @@ body {
   /* background: blue; */
 }
 
-/* .main {
-  background: black;
-  color: white;
-} */
+.main {
+  display: flex;
+}
 
 .about {
   width: 50%;
@@ -35,4 +34,40 @@ body {
 
 ul {
   list-style: circle;
+}
+
+.right-side {
+  width: 40%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-media {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+}
+
+.terms {
+  display: flex;
+  margin-left: 8rem;
+  margin-top: 1rem;
+}
+
+/* .terms input {
+  margin-right: 10px;
+} */
+
+.button {
+  width: 40%;
+  padding: 10px;
+  background: #2CEAA3;
+}
+
+.form-input {
+  padding-right: 108px;
+  padding-bottom: 8px;
 }
