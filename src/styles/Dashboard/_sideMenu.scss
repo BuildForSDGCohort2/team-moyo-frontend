@@ -1,0 +1,101 @@
+.aside-container {
+	height: 1310px;
+	border: 1px solid $background-secondary;
+	background-color: #fff;
+	.navigation {
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		.logo-container {
+			border: 1px solid white;
+			box-shadow: 2px 2px $background-main;
+			height: 80px;
+			.image-container {
+				img {
+					width: 70px;
+					height: 70px;
+					margin-left: 25px;
+				}
+			}
+		}
+		.list {
+			margin-left: 10px;
+			margin-top: 50px;
+			padding: 10px;
+			position: relative;
+			top: 30px;
+			font-size: 1.2em;
+			.list-menu {
+				transform: scale(1, 0);
+				transform-origin: top;
+				transition: transform 0.5s ease-in-out;
+				height: 0;
+				animation: dropdownClose 1 0.5s linear;
+				padding: 0;
+			}
+			.open {
+				transform: scale(1, 1);
+				animation: dropdownOpen 1 0.5s linear;
+				height: auto;
+				font-size: 0.75em;
+			}
+			.clicked {
+				color: $highlight !important;
+			}
+			a {
+				cursor: pointer;
+				.module-name {
+					color: $main-font;
+				}
+				.arrow {
+					margin-left: 10px;
+				}
+			}
+		}
+		svg {
+			margin-right: 10px;
+		}
+		.list-item {
+			background-color: #e7f1f9;
+			border-left: 3px solid $highlight;
+			font-size: 1.2em;
+		}
+		.highlighted {
+			background-color: $highlight;
+			color: #fff;
+		}
+	}
+	.copyright-container {
+		position: absolute;
+		bottom: 0;
+		background-color: $background;
+		font-size: 0.75em;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		p {
+			color: $secondry-font;
+			margin: 0 10px;
+		}
+	}
+}
+
+@keyframes dropdownOpen {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: auto;
+	}
+}
+@keyframes dropdownClose {
+	0% {
+		height: auto;
+	}
+	100% {
+		height: 0;
+	}
+}

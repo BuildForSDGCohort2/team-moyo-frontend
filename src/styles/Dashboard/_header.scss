@@ -1,0 +1,33 @@
+.header-container {
+	padding: 0;
+	box-shadow: 0px 3px $background-main;
+	.header {
+		height: 80px;
+		list-style: none;
+		background-image: linear-gradient($background-main 30%, #e5f0fa 80%);
+		justify-content: flex-end;
+		.profile-drop {
+			margin-right: 30px;
+			margin-top: 15px;
+			display: flex;
+			.profile-name {
+				color: $main-font;
+			}
+			svg {
+				margin-top: 12px;
+				margin-left: 10px;
+			}
+			.profile-menu {
+				left: -15px !important;
+				border-radius: 5px;
+			}
+		}
+	}
+	.image-container {
+		margin-right: 10px;
+		margin-top: 15px;
+		.avatar-image {
+			width: 40px;
+		}
+	}
+}
