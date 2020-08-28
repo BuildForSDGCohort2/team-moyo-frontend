@@ -24,18 +24,29 @@ export const SideMenu = (props) => {
 						Dashboard
 					</NavLink>
 					<ModuleList
-						moduleName="Manage Posts"
-						lists={[
-							["Create Post", "/create-post"],
-							["Posts History", "/posts-history"],
-						]}
-						icon={faUsers}
-					/>
-					<ModuleList
 						moduleName="Manage Users"
 						lists={[
 							["Add new User", "/add-user"],
 							["Users List", "/users-list"],
+							["Block User", "/block-user"],
+						]}
+						icon={faUsers}
+					/>
+					<ModuleList
+						moduleName="Manage Posts"
+						lists={[
+							["Create Post", "/create-post"],
+							["Edit Post", "/edit-post"],
+							["Block Post", "/block-post"],
+						]}
+						icon={faUsers}
+					/>
+					<ModuleList
+						moduleName="Manage Jobs"
+						lists={[
+							["Create Job", "/create-job"],
+							["Edit Job", "/edit-job"],
+							["Block", "/block"],
 						]}
 						icon={faUsers}
 					/>

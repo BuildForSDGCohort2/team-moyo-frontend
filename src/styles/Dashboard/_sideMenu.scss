@@ -25,6 +25,9 @@
 			position: relative;
 			top: 30px;
 			font-size: 1.2em;
+			.arrow {
+				transition: transform 0.2s ease-in-out;
+			}
 			.list-menu {
 				transform: scale(1, 0);
 				transform-origin: top;
@@ -41,6 +44,10 @@
 			}
 			.clicked {
 				color: $highlight !important;
+				.arrow {
+					transform: rotate(90deg);
+					transition: transform 0.2s ease-in-out;
+				}
 			}
 			a {
 				cursor: pointer;

@@ -10,8 +10,17 @@
 			margin-right: 30px;
 			margin-top: 15px;
 			display: flex;
+			.fa-angle-right {
+				transition: transform 0.2s ease-in-out;
+			}
 			.profile-name {
 				color: $main-font;
+			}
+			&.show {
+				.fa-angle-right {
+					transform: rotate(90deg);
+					transition: transform 0.2s ease-in-out;
+				}
 			}
 			svg {
 				margin-top: 12px;
@@ -20,6 +29,7 @@
 			.profile-menu {
 				left: -15px !important;
 				border-radius: 5px;
+				transition: all 0.2s ease-in-out;
 			}
 		}
 	}
