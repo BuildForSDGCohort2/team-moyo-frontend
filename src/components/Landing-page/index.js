@@ -10,7 +10,7 @@ export default class LandingPage extends Component {
     return (
       <div className="container">
         <div className="banner">
-        <img className="" src={logo} alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
         </div>
         <div className="main">
             <div className="about">

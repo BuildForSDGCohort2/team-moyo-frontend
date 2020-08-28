@@ -2,11 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
   font-family: sans-serif;
   line-height: 1.4;
+  overflow-x: hidden;
+  background: #f1f3f2;
+
 }
 .container {
   width: 100%;
@@ -14,20 +18,37 @@ body {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+  overflow-x: hidden;
 }
+
 .banner {
   text-align: center;
-  /* background: blue; */
 }
 
 .main {
-  display: flex;
+  display: block;
 }
 
-.about {
-  width: 50%;
-  /* margin-bottom: 3rem; */
+@media (min-width: 768px) {
+  .main {
+    display: flex;
+  }
+  .about {
+    width: 50%;
+  }
+
+  .right-side {
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 30px;
+  }
+  
 }
+
+.logo {
+  width: 300px;
+}
+
 .moyo-text {
   margin-bottom: 3rem;
 }
@@ -50,7 +71,6 @@ ul li::before {
 }
 
 .right-side {
-  width: 40%;
   margin-top: 2rem;
   text-align: center;
 }
@@ -66,13 +86,8 @@ label {
 
 .terms {
   display: flex;
-  margin-left: 8rem;
   margin-top: 1rem;
 }
-
-/* .terms input {
-  margin-right: 10px;
-} */
 
 .button {
   width: 40%;
