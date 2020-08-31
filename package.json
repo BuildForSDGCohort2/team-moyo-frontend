@@ -35,8 +35,6 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.11.4",
-		"@storybook/addon-essentials": "^6.0.17",
-		"@storybook/node-logger": "^6.0.17",
 		"babel-loader": "^8.1.0",
 		"eslint-config-airbnb": "^18.2.0",
 		"eslint-plugin-import": "^2.22.0",
