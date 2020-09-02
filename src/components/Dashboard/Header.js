@@ -1,6 +1,6 @@
 import React from "react";
 import { AdminProfile } from "./adminProfile";
-import { ProfileImage } from "./profileImage";
+import { ProfileImage } from "../../reusable-components/profileImage";
 import "../../styles/Dashboard/app.scss";
 import image from "../../images/logo-moyo.png";
 export const Header = (props) => {

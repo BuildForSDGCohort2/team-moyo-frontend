@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfileImage } from "./profileImage";
+import { ProfileImage } from "../../reusable-components/profileImage";
 import { ModuleList } from "./moduleList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";

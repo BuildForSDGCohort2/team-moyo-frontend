@@ -1,0 +1,204 @@
+.section-header-container {
+	padding: 25px;
+	color: $main-font;
+}
+.breadcrumb-container {
+	display: flex;
+	a,
+	span {
+		padding: 10px;
+		color: $secondry-font;
+	}
+	svg {
+		position: relative;
+		top: 14px;
+		color: $secondry-font;
+	}
+}
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+	button {
+		width: 210px;
+		height: 35px;
+		background-color: $highlight;
+		color: #fff;
+		border-radius: 15px;
+		margin-right: 25px;
+		// &:hover {
+		//     background-color: #fff !important;
+		//     color: $highlight !important;
+		// }
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+.buttonOutlined-container {
+	display: flex;
+	justify-content: center;
+	button {
+		width: 300px;
+		height: 35px;
+		border-color: $highlight;
+		color: $highlight;
+		border-radius: 15px;
+		// &:hover {
+		//     background-color: $highlight !important;
+		//     color: #fff !important;
+		// }
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+.link-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 210px;
+	height: 35px;
+	background-color: $highlight;
+	color: #fff;
+	border-radius: 15px;
+	position: absolute;
+	right: 50px;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.createUser-container {
+	height: 100%;
+	background-color: #fff;
+	h3 {
+		padding: 25px;
+		border-bottom: 1px solid $secondry-font;
+	}
+	.input {
+		margin-left: 35px;
+		padding: 25px;
+		label {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		input {
+			border-radius: 20px;
+			background-color: #f8fafa;
+		}
+	}
+	.bio-input {
+		display: flex;
+		flex-direction: column;
+		margin-left: 35px;
+		padding: 25px;
+		label {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+	}
+	.credit-label {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-left: 35px;
+	}
+	.map {
+		margin-left: 50px;
+	}
+}
+.controls {
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	top: 40px;
+	button {
+		width: 210px;
+		margin-right: 20px;
+	}
+}
+
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+	button {
+		width: 200px;
+		height: 35px;
+		background-color: $highlight;
+		color: #fff;
+		border-radius: 15px;
+		margin-right: 25px;
+		// &:hover {
+		//     background-color: #fff !important;
+		//     color: $highlight !important;
+		// }
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+.buttonOutlined-container {
+	display: flex;
+	justify-content: center;
+	button {
+		width: 200px;
+		height: 35px;
+		border-color: $highlight;
+		color: $highlight;
+		border-radius: 15px;
+		outline: none;
+		// &:hover {
+		//     background-color: $highlight !important;
+		//     color: #fff !important;
+		// }
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+// .data-table {
+//     margin: 0 30px;
+//     background-color: #fff;
+//     border: 1px solid $background-secondary;
+//     #table_wrapper {
+//         padding: 20px;
+//         .sorting,
+//         .sorting_asc,
+//         .sorting_desc {
+//             color: $highlight !important;
+//         }
+//         .dataTables_filter input {
+//             border-radius: 10px;
+//         }
+//         .dataTables_length {
+//             float: right;
+//         }
+//         .dt-buttons {
+//             float: left;
+//         }
+//         tr {
+//             height: 70px;
+//         }
+//         tr.odd {
+//             background-color: $background !important;
+//         }
+//         button {
+//             margin-left: 50px;
+//             background-color: $highlight;
+//             border-radius: 15px;
+//             color: #fff;
+//             width: 100px;
+//             &:focus {
+//                 outline: 0;
+//             }
+//         }
+//         .dt-button{
+//             margin-bottom: 10px;
+//         }
+//         #table{
+//             tr{
+//                 height: 60%;
+//             }
+//         }
+//     }
+// }
