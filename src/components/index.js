@@ -1,8 +1,17 @@
 import Button from './Button';
 import Avatar from './Avatar';
-import Card from './Card';
+import PostCard from './PostCard';
 import Loader from './Loader';
 import Input from './Input';
 import CodeEditor from './CodeEditor';
+import Header from './Header';
 
-export { Button, Avatar, Card, Loader, Input, CodeEditor };
+export {
+	Button,
+	Avatar,
+	PostCard,
+	Loader,
+	Input,
+	CodeEditor,
+	Header,
+};

@@ -1,0 +1,21 @@
+.moyo-home{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.moyo-navigation{
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.moyo-feed{
+    width: 50%;
+}
+
+.moyo-extras{
+    width: 30%;
+}

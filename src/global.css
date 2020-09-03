@@ -19,6 +19,9 @@
 
 body{
 	background-color: #FBFEFC;
+	font-weight: 400;
+	font-size: 14px;
+	margin: 0;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -488,6 +491,17 @@ ul {
 }
 .pr-20 {
 	padding-right: 20px;
+}
+
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
 }
 
 .screen-reader-only{
