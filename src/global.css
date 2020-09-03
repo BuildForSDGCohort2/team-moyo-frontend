@@ -19,6 +19,9 @@
 
 body{
 	background-color: #FBFEFC;
+	font-weight: 400;
+	font-size: 14px;
+	margin: 0;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -490,6 +493,17 @@ ul {
 	padding-right: 20px;
 }
 
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
+}
+
 .screen-reader-only{
 		position: absolute;
 		width: 1px;
@@ -499,4 +513,12 @@ ul {
 		clip: rect(0,0,0,0);
 		white-space: nowrap;
 		border: 0;
+}
+
+.moyo-button{
+	background-color: var(--moyo-green-400);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
