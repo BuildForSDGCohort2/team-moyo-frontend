@@ -111,7 +111,7 @@ const Homepage = () => {
 				reiciendis non, minus quibusdam consequuntur hic iste officia
 				excepturi, possimus debitis vero corporis fugiat et impedit
 				totam maxime?"
-					profilePage={profile}
+					profilePicture={profile}
 					name={'Desmond Nyamador'}
 					datePosted={'20th June'}
 					likes={20}
@@ -120,6 +120,9 @@ const Homepage = () => {
 						'main.js': code1,
 						'second.js': code2,
 					}}
+					likeCount={4040}
+					commentCount={340}
+					isLiked={true}
 				/>
 			</main>
 			<aside className="moyo-extras"></aside>
