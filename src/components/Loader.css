@@ -1,0 +1,16 @@
+@keyframes allround{
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.spinner-border{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: .2em solid var(--moyo-green-400);
+    border-right-color: #0000;
+    border-radius: 50%;
+    animation: allround .7s linear infinite;
+}
