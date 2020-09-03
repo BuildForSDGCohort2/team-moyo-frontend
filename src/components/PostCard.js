@@ -20,7 +20,6 @@ const PostCard = ({
 }) => {
 	const [codeBlock, setcodeBlock] = useState(Object.values(code)[0]);
 	const [isCodeHidden, setISCodeHidden] = useState(true);
-	const [isLiked, setIsLiked] = useState(liked);
 
 	function handleTabClick(block) {
 		setcodeBlock(code[block]);
