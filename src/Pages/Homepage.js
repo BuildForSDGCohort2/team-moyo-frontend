@@ -2,6 +2,11 @@ import React from 'react';
 import './Homepage.css';
 import profile from './profile.jpg';
 import { PostCard } from '../components';
+import { ReactComponent as Feed } from '../components/icons/feed.svg';
+import { ReactComponent as Console } from '../components/icons/console.svg';
+import { ReactComponent as Rocket } from '../components/icons/rocket.svg';
+import { ReactComponent as Code } from '../components/icons/code.svg';
+import { ReactComponent as Suitcase } from '../components/icons/suitcase.svg';
 
 const Homepage = () => {
 	const code1 = `import React from 'react';
@@ -67,17 +72,34 @@ const Homepage = () => {
 			<nav className="moyo-navigation">
 				<ul className="navigation-list">
 					<li className="list-item-wrap">
-						<a className="list-item-link">Feed</a>
+						<a href="/" className="list-item-link">
+							<Feed height="20" className="mr-10" />
+							Feed
+						</a>
 					</li>
 					<li className="list-item-wrap">
-						<a className="list-item-link">Launch</a>
+						<a href="/" className="list-item-link">
+							<Rocket height="20" className="mr-10" />
+							Launch
+						</a>
 					</li>
 					<li className="list-item-wrap">
-						<a className="list-item-link">Jobs</a>
+						<a href="/" className="list-item-link">
+							<Suitcase height="20" className="mr-10" />
+							Jobs
+						</a>
 					</li>
 					<li className="list-item-wrap">
-						<a className="list-item-link">Account</a>
+						<a href="/" className="list-item-link">
+							<Console height="20" className="mr-10" />
+							Account
+						</a>
 					</li>
+
+					<button className="p-8 col moyo-button mt-10 flex-row">
+						<Code height="20" className="mr-10" />
+						Commit
+					</button>
 				</ul>
 			</nav>
 			<main className="moyo-feed">

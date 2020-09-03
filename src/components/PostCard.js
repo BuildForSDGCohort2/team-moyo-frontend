@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Card.css';
 import CodeEditor from './CodeEditor';
 import PropTypes from 'prop-types';
+import { ReactComponent as Heart } from './icons/heart.svg';
+import { ReactComponent as Comment } from './icons/comment.svg';
+import { ReactComponent as Code } from './icons/code.svg';
 
 /**@module components/PostCard */
 
@@ -11,9 +14,9 @@ const PostCard = ({
 	profilePicture,
 	code,
 	datePosted,
-	...props
 }) => {
 	const [codeBlock, setcodeBlock] = useState(Object.values(code)[0]);
+	const [isCodeHidden, setISCodeHidden] = useState(true);
 
 	function handleTabClick(block) {
 		setcodeBlock(code[block]);
@@ -36,19 +39,47 @@ const PostCard = ({
 
 			<div className="p-12 moyo-postcard--text mb-20">{text}</div>
 
-			<div className="flex-row">
-				{Object.keys(code).map((codeTab) => (
-					<button
-						className="code-tab"
-						key={Math.random()}
-						onClick={() => handleTabClick(codeTab)}
-					>
-						{codeTab}
-					</button>
-				))}
-			</div>
-			<div className="code-view">
-				<CodeEditor value={codeBlock} readonly="true" />
+			{isCodeHidden ? (
+				<div />
+			) : (
+				<div>
+					<div className="flex-row">
+						{Object.keys(code).map((codeTab) => (
+							<button
+								className="code-tab"
+								key={Math.random()}
+								onClick={() => handleTabClick(codeTab)}
+							>
+								{codeTab}
+							</button>
+						))}
+					</div>
+					<div className="code-view">
+						<CodeEditor value={codeBlock} readonly="true" />
+					</div>
+				</div>
+			)}
+
+			<div className="p-12">
+				<button className="p-4 action-button">
+					<Heart height="15px" width="15px" />
+					200
+				</button>
+				<button className="p-4 action-button">
+					<Comment height="15px" width="15px" />
+					30
+				</button>
+				<button
+					className="p-4 action-button"
+					onClick={() =>
+						isCodeHidden
+							? setISCodeHidden(false)
+							: setISCodeHidden(true)
+					}
+				>
+					<Code height="15px" width="15px" />
+					View Code
+				</button>
 			</div>
 		</div>
 	);

@@ -12,6 +12,22 @@
     flex-direction: column;
 }
 
+.navigation-list{
+    list-style: none;
+}
+
+.list-item-wrap{
+    color: var(--moyo-green-400);
+    padding: 20px;
+    font-weight: 700;
+}
+
+.list-item-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .moyo-feed{
     width: 50%;
 }
