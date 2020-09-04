@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -9,9 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { UpperSection } from "../../reusable-components/upperSection";
 import { moyoFirestore } from "../../firebase/config";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { CheckBox } from "../../reusable-components/CheckBox";
 
 const useStyles = makeStyles({
 	tableContainer: {
@@ -30,20 +28,10 @@ const useStyles = makeStyles({
 	},
 });
 
-export const AllUsersTable = () => {
+export const BlockUser = () => {
 	const [rows, setRows] = useState([]);
+	const [block, setBlock] = useState(false);
 	const classes = useStyles();
-	const deleteUser = (name) => {
-		const db = moyoFirestore;
-		db.collection("Users")
-			.doc(`${name}`)
-			.delete()
-			.then(() => {
-				console.log("success to delete from db");
-				window.location.reload(false);
-			})
-			.catch((err) => console.log(err));
-	};
 	useEffect(() => {
 		const db = moyoFirestore;
 		db.collection("Users")
@@ -61,9 +49,9 @@ export const AllUsersTable = () => {
 	return (
 		<>
 			<UpperSection
-				headerName="Users List"
+				headerName="Block User"
 				moduleName="All Users"
-				name="All Users"
+				name="Block User"
 			/>
 			<TableContainer component={Paper} className={classes.tableContainer}>
 				<Table className={classes.table} aria-label="simple table">
@@ -76,7 +64,7 @@ export const AllUsersTable = () => {
 							<TableCell align="left">Twitter</TableCell>
 							<TableCell align="left">Mobile</TableCell>
 							<TableCell align="left">Bio</TableCell>
-							<TableCell align="left">Actions</TableCell>
+							<TableCell align="left">Block</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
@@ -93,20 +81,16 @@ export const AllUsersTable = () => {
 								<TableCell align="left">{row.bio}</TableCell>
 
 								<TableCell align="left">
-									<Link to={{ pathname: "/edit-user", state: row }}>
-										<FontAwesomeIcon icon={faEdit} className={classes.icon} />
-									</Link>
-									<FontAwesomeIcon
-										icon={faTrash}
-										className={classes.icon}
-										onClick={() => deleteUser(row.name)}
-									/>
+									<CheckBox block={setBlock} />
 								</TableCell>
 							</TableRow>
 						))}
 					</TableBody>
 				</Table>
 			</TableContainer>
+			<div>
+				{block ? <p className="message-success">Blocked Successfully</p> : null}
+			</div>
 		</>
 	);
 };

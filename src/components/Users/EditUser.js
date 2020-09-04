@@ -4,15 +4,17 @@ import { Input } from "../../reusable-components/input";
 import { Button } from "../../reusable-components/button";
 import { ButtonOutlined } from "../../reusable-components/buttonOutlined";
 import { moyoFirestore } from "../../firebase/config";
+import { useHistory } from "react-router-dom";
 
-export const CreateUser = () => {
-	const [email, setEmail] = useState("");
-	const [country, setCountry] = useState("");
-	const [name, setName] = useState("");
-	const [github, setGithub] = useState("");
-	const [twitter, setTwitter] = useState("");
-	const [mobile, setMobile] = useState("");
-	const [bio, setBio] = useState("");
+export const EditUser = ({ location }) => {
+	const data = location.state;
+	const [email, setEmail] = useState(data.email);
+	const [country, setCountry] = useState(data.country);
+	const [name, setName] = useState(data.name);
+	const [github, setGithub] = useState(data.github);
+	const [twitter, setTwitter] = useState(data.twitter);
+	const [mobile, setMobile] = useState(data.mobile);
+	const [bio, setBio] = useState(data.bio);
 	const [msg, setMsg] = useState(false);
 	const onHandler = (type, value) => type(value);
 	const onSubmitHandler = (e) => {
@@ -21,7 +23,7 @@ export const CreateUser = () => {
 		const db = moyoFirestore;
 		db.collection("Users")
 			.doc(`${name}`)
-			.set({
+			.update({
 				name: name,
 				email: email,
 				country: country,
@@ -31,7 +33,7 @@ export const CreateUser = () => {
 				bio: bio,
 			})
 			.then(() => {
-				console.log("success to add to db");
+				console.log("success to update db");
 				setMsg(true);
 				setTimeout(() => {
 					setMsg(false);
@@ -42,15 +44,15 @@ export const CreateUser = () => {
 	return (
 		<div>
 			<UpperSection
-				headerName="Create New User"
+				headerName="Edit User"
 				moduleName="Manage Users"
-				name="New User"
+				name="Edit User"
 			/>
 			<div className="createUser-container container">
 				<form onSubmit={onSubmitHandler}>
 					<div className="row">
 						<div className="col-12">
-							<h3>Create User</h3>
+							<h3>Edit User</h3>
 						</div>
 						<div className="form-group input col-5">
 							<label htmlFor="website">Name</label>
@@ -124,7 +126,7 @@ export const CreateUser = () => {
 					</div>
 					<div>
 						{msg ? (
-							<p className="message-success">Created Successfully</p>
+							<p className="message-success">Updated Successfully</p>
 						) : null}
 					</div>
 					<div className="controls">
