@@ -1,0 +1,43 @@
+.header-container {
+	padding: 0;
+	box-shadow: 0px 3px $background-main;
+	.header {
+		height: 80px;
+		list-style: none;
+		background-image: linear-gradient($background-main 30%, #e5f0fa 80%);
+		justify-content: flex-end;
+		.profile-drop {
+			margin-right: 30px;
+			margin-top: 15px;
+			display: flex;
+			.fa-angle-right {
+				transition: transform 0.2s ease-in-out;
+			}
+			.profile-name {
+				color: $main-font;
+			}
+			&.show {
+				.fa-angle-right {
+					transform: rotate(90deg);
+					transition: transform 0.2s ease-in-out;
+				}
+			}
+			svg {
+				margin-top: 12px;
+				margin-left: 10px;
+			}
+			.profile-menu {
+				left: -15px !important;
+				border-radius: 5px;
+				transition: all 0.2s ease-in-out;
+			}
+		}
+	}
+	.image-container {
+		margin-right: 10px;
+		margin-top: 15px;
+		.avatar-image {
+			width: 40px;
+		}
+	}
+}

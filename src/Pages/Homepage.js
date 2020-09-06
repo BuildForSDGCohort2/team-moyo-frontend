@@ -66,7 +66,13 @@ const Homepage = () => {
 		name: PropTypes.string,
 	};
 	`;
-
+	const code3 = `PostCard.propTypes = {
+		text: PropTypes.string,
+		name: PropTypes.string,
+		code: PropTypes.object,
+		datePosted: PropTypes.string,
+	};
+	`;
 	return (
 		<div className="moyo-home">
 			<nav className="moyo-navigation">
@@ -119,6 +125,7 @@ const Homepage = () => {
 					code={{
 						'main.js': code1,
 						'second.js': code2,
+						'3.js': code3,
 					}}
 					likeCount={4040}
 					commentCount={340}
