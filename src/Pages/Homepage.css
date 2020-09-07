@@ -35,3 +35,15 @@
 .moyo-extras{
     width: 30%;
 }
+
+.moyo-feed, .moyo-postcard{
+    width: 100vw;
+}
+
+.moyo-postcard{
+    border-radius: 0;
+}
+
+@media screen and (max-width: 450px){
+
+}

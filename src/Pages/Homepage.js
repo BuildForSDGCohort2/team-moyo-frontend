@@ -69,36 +69,36 @@ const Homepage = () => {
 
     return (
         <div className="moyo-home">
-            <nav className="moyo-navigation">
+            <nav className="moyo-navigation" style={{ display: "none" }}>
                 <ul className="navigation-list">
                     <li className="list-item-wrap">
                         <a href="/" className="list-item-link">
                             <Feed height="20" className="mr-10" />
-                            Feed
+                            <span className="menu-item-text">Feed</span>
                         </a>
                     </li>
                     <li className="list-item-wrap">
                         <a href="/" className="list-item-link">
                             <Rocket height="20" className="mr-10" />
-                            Launch
+                            <span className="menu-item-text">Launch</span>
                         </a>
                     </li>
                     <li className="list-item-wrap">
                         <a href="/" className="list-item-link">
                             <Suitcase height="20" className="mr-10" />
-                            Jobs
+                            <span className="menu-item-text">Jobs</span>
                         </a>
                     </li>
                     <li className="list-item-wrap">
                         <a href="/" className="list-item-link">
                             <Console height="20" className="mr-10" />
-                            Account
+                            <span className="menu-item-text">Account</span>
                         </a>
                     </li>
 
                     <button className="p-8 col moyo-button mt-10 flex-row">
                         <Code height="20" className="mr-10" />
-                        Commit
+                        <span className="menu-item-text">Commit</span>
                     </button>
                 </ul>
             </nav>
