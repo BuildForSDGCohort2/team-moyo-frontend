@@ -18,7 +18,7 @@
 }
 
 body{
-	background-color: #FBFEFC;
+	background-color: white;
 	font-weight: 400;
 	font-size: 14px;
 	margin: 0;
@@ -38,7 +38,7 @@ body{
   --moyo-green-100: #7CFEF0;
   --moyo-green-200: #6BFFB8;
   --moyo-green-300: #2CEAA3;
-  --moyo-green-400: #28965A;
+  --moyo-green-400: #17bf63;
   --moyo-green-500: #2A6041;
 	--yellow-100: #fffbcc;
 	--yellow-200: #fff7a8;
@@ -516,7 +516,8 @@ ul {
 }
 
 .moyo-button{
-	background-color: var(--moyo-green-400);
+    background-color: var(--moyo-green-400);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

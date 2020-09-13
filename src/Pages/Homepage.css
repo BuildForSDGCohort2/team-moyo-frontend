@@ -1,3 +1,7 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
 .moyo-home{
     display: flex;
     flex-direction: row;
@@ -7,17 +11,22 @@
 
 .moyo-navigation{
     width: 30%;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .navigation-list{
     list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
 }
 
 .list-item-wrap{
-    color: var(--moyo-green-400);
+    /* color: var(--moyo-green-400); */
     padding: 20px;
     font-weight: 700;
 }
@@ -36,7 +45,7 @@
     width: 30%;
 }
 
-.moyo-feed, .moyo-postcard{
+.moyo-postcard{
     width: 100vw;
 }
 
@@ -44,6 +53,23 @@
     border-radius: 0;
 }
 
-@media screen and (max-width: 450px){
+.menu-item-text{
+    line-height: 1.3125;
+    font-size: 19px;
+}
 
+
+.modal-wrap{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 12px;
+    margin: auto;
+}
+
+@media screen and (min-width: 450px){
+    .moyo-postcard{
+        width: 450px;
+        margin: auto;
+    }
 }
