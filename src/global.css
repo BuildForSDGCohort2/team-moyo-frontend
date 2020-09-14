@@ -18,7 +18,7 @@
 }
 
 body{
-	background-color: white;
+    background-color: #fafafa;
 	font-weight: 400;
 	font-size: 14px;
 	margin: 0;
@@ -199,6 +199,10 @@ h6,
 p,
 ul {
 	margin: 0;
+}
+
+ul{
+    list-style: none;
 }
 
 .col {
@@ -517,7 +521,6 @@ ul {
 
 .moyo-button{
     background-color: var(--moyo-green-400);
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

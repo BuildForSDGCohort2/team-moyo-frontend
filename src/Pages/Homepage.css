@@ -1,70 +1,42 @@
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-}
-
 .moyo-home{
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .moyo-navigation{
-    width: 30%;
+    width: 72px;
+    border-right: 1px solid #ebeced;
+    background-color: white;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.navigation-list{
-    list-style: none;
-    padding: 0;
-    position: absolute;
+    padding: 12px 0px 16px;
+    position: sticky;
     top: 0;
+    overflow: hidden auto;
 }
 
-.list-item-wrap{
-    /* color: var(--moyo-green-400); */
-    padding: 20px;
-    font-weight: 700;
+.moyo-navigation > ul {
+    text-align: center;
+    padding: 0;
 }
 
-.list-item-link{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.moyo-navigation{
+    cursor: pointer;
 }
 
-.moyo-feed{
+.moyo-navigation-link:hover{
+    background-color: var(--neutral-200);
+}
+
+.moyo-feed-container{
     width: 50%;
 }
 
-.moyo-extras{
-    width: 30%;
-}
-
-.moyo-postcard{
-    width: 100vw;
-}
-
-.moyo-postcard{
-    border-radius: 0;
-}
-
-.menu-item-text{
-    line-height: 1.3125;
-    font-size: 19px;
-}
-
-
-.modal-wrap{
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border-radius: 12px;
-    margin: auto;
+.moyo-aside{
+    width: calc(72px - (50/100 * 100vw));
 }
 
 @media screen and (min-width: 450px){
