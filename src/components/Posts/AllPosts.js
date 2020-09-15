@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -9,7 +9,9 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { UpperSection } from "../../reusable-components/upperSection";
 import { moyoFirestore } from "../../firebase/config";
-import { CheckBox } from "../../reusable-components/CheckBox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
 	tableContainer: {
@@ -28,30 +30,23 @@ const useStyles = makeStyles({
 	},
 });
 
-export const BlockUser = () => {
+export const AllPosts = () => {
 	const [rows, setRows] = useState([]);
-	const [msg, setMsg] = useState(false);
 	const classes = useStyles();
-	const onClickHandler = (name) => {
-		//db stuff goes here....
+	const deleteUser = (name) => {
 		const db = moyoFirestore;
-		db.collection("Users")
+		db.collection("Posts")
 			.doc(`${name}`)
-			.update({
-				status: "Blocked",
-			})
+			.delete()
 			.then(() => {
-				console.log("success to update db");
-				setMsg(true);
-				setTimeout(() => {
-					setMsg(false);
-				}, 2000);
+				console.log("success to delete from db");
+				window.location.reload(false);
 			})
 			.catch((err) => console.log(err));
 	};
 	useEffect(() => {
 		const db = moyoFirestore;
-		db.collection("Users")
+		db.collection("Posts")
 			.get()
 			.then((querySnapshot) => {
 				querySnapshot.forEach(async (doc) => {
@@ -66,22 +61,22 @@ export const BlockUser = () => {
 	return (
 		<>
 			<UpperSection
-				headerName="Block User"
-				moduleName="All Users"
-				name="Block User"
+				headerName="Posts List"
+				moduleName="All Posts"
+				name="All Posts"
 			/>
 			<TableContainer component={Paper} className={classes.tableContainer}>
 				<Table className={classes.table} aria-label="simple table">
 					<TableHead>
 						<TableRow className={classes.tableRow}>
-							<TableCell align="left">Name</TableCell>
-							<TableCell align="left">Email</TableCell>
-							<TableCell align="left">Country</TableCell>
-							<TableCell align="left">Github</TableCell>
-							<TableCell align="left">Twitter</TableCell>
-							<TableCell align="left">Mobile</TableCell>
-							<TableCell align="left">Bio</TableCell>
-							<TableCell align="left">Block</TableCell>
+							<TableCell align="left">Author Name</TableCell>
+							<TableCell align="left">Likes</TableCell>
+							<TableCell align="left">Tags</TableCell>
+							<TableCell align="left">Language</TableCell>
+							<TableCell align="left">Community ID</TableCell>
+							<TableCell align="left">Parent ID</TableCell>
+							<TableCell align="left">Post</TableCell>
+							<TableCell align="left">Actions</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
@@ -90,24 +85,28 @@ export const BlockUser = () => {
 								<TableCell component="th" scope="row">
 									{row.name}
 								</TableCell>
-								<TableCell align="left">{row.email}</TableCell>
-								<TableCell align="left">{row.country}</TableCell>
-								<TableCell align="left">{row.github}</TableCell>
-								<TableCell align="left">{row.twitter}</TableCell>
-								<TableCell align="left">{row.mobile}</TableCell>
-								<TableCell align="left">{row.bio}</TableCell>
+								<TableCell align="left">{row.likes}</TableCell>
+								<TableCell align="left">{row.tags}</TableCell>
+								<TableCell align="left">{row.language}</TableCell>
+								<TableCell align="left">{row.comId}</TableCell>
+								<TableCell align="left">{row.parentId}</TableCell>
+								<TableCell align="left">{row.postBody}</TableCell>
 
 								<TableCell align="left">
-									<CheckBox block={() => onClickHandler(row.name)} />
+									<Link to={{ pathname: "/edit-post", state: row }}>
+										<FontAwesomeIcon icon={faEdit} className={classes.icon} />
+									</Link>
+									<FontAwesomeIcon
+										icon={faTrash}
+										className={classes.icon}
+										onClick={() => deleteUser(row.name)}
+									/>
 								</TableCell>
 							</TableRow>
 						))}
 					</TableBody>
 				</Table>
 			</TableContainer>
-			<div>
-				{msg ? <p className="message-success">Blocked Successfully</p> : null}
-			</div>
 		</>
 	);
 };

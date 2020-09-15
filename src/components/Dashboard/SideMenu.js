@@ -36,8 +36,8 @@ export const SideMenu = (props) => {
 						moduleName="Manage Posts"
 						lists={[
 							["Create Post", "/create-post"],
-							["Edit Post", "/edit-post"],
-							["Block Post", "/block-post"],
+							["All Posts", "/all-posts"],
+							// ["Block Post", "/block-post"],
 						]}
 						icon={faUsers}
 					/>
