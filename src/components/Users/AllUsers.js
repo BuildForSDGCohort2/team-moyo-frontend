@@ -76,6 +76,7 @@ export const AllUsersTable = () => {
 							<TableCell align="left">Twitter</TableCell>
 							<TableCell align="left">Mobile</TableCell>
 							<TableCell align="left">Bio</TableCell>
+							<TableCell align="left">Posts</TableCell>
 							<TableCell align="left">Actions</TableCell>
 						</TableRow>
 					</TableHead>
@@ -91,6 +92,11 @@ export const AllUsersTable = () => {
 								<TableCell align="left">{row.twitter}</TableCell>
 								<TableCell align="left">{row.mobile}</TableCell>
 								<TableCell align="left">{row.bio}</TableCell>
+								<TableCell align="left">
+									<Link to={{ pathname: "/user-posts", state: row }}>
+										{row.posts.length}
+									</Link>
+								</TableCell>
 
 								<TableCell align="left">
 									<Link to={{ pathname: "/edit-user", state: row }}>

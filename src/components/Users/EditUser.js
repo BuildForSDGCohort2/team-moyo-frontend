@@ -4,7 +4,6 @@ import { Input } from "../../reusable-components/input";
 import { Button } from "../../reusable-components/button";
 import { ButtonOutlined } from "../../reusable-components/buttonOutlined";
 import { moyoFirestore } from "../../firebase/config";
-import { useHistory } from "react-router-dom";
 
 export const EditUser = ({ location }) => {
 	const data = location.state;
