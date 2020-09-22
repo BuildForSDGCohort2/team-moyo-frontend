@@ -1,18 +1,27 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Header } from './components';
-import HomePage from './Pages/Homepage';
-import './global.css';
+import React, { useContext } from "react";
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./Pages/Homepage";
+import NewPost from "./Pages/NewPost";
+import "./global.css";
+import { AuthContext } from "./context/AuthContext";
+import { SignUp } from "./Pages/SignUp/SignUp";
 
 const Routes = () => {
-	return (
-		<div>
-			<Header />
-			<Switch>
-				<Route exact path="/" component={HomePage} />
-			</Switch>
-		</div>
-	);
+    const { isAuth } = useContext(AuthContext);
+    return (
+        <>
+            {!isAuth ? (
+                <Switch>
+                    <Route exact path="/" component={SignUp} />
+                </Switch>
+            ) : (
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/new" component={NewPost} />
+                </Switch>
+            )}
+        </>
+    );
 };
 
 export default Routes;
