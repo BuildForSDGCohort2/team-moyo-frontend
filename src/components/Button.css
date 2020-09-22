@@ -9,10 +9,6 @@
 	border: none;
 }
 
-.moyo-button:hover{
-	background-color: var(--moyo-green-500);
-}
-
 .moyo-button--medium {
 	font-size: 14px;
 	padding: 11px 20px;

@@ -1,9 +1,17 @@
 .moyo-postcard{
-    border-radius: 12px;
     background-color: white;
     border: 1px solid var(--neutral-300);
-    width: 450px;
-    
+    width: 550px;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+.moyo-postcard:last-child{
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+.moyo-postcard:hover{
+    background-color: var(--neutral-200);
 }
 
 .moyo-postcard--header{
